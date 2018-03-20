@@ -1,0 +1,36 @@
+{
+  "name": "telemetree",
+  "version": "1.0.1",
+  "description": "Histograms and time plots.",
+  "main": "source/Telemetree.js",
+  "scripts": {
+    "start": "node source/Telemetree.js",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -u tdd -R spec",
+    "test": "./node_modules/mocha/bin/_mocha -u tdd -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenvelozo/telemetree.git"
+  },
+  "keywords": [
+    "timing"
+  ],
+  "author": "Steven Velozo <steven@velozo.com> (http://velozo.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevenvelozo/telemetree/issues"
+  },
+  "homepage": "https://github.com/stevenvelozo/telemetree",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "codeclimate-test-reporter": "0.5.0",
+    "coveralls": "3.0.0",
+    "groc": "^0.8.0",
+    "istanbul": "0.4.5",
+    "mocha": "5.0.4"
+  },
+  "dependencies": {
+    "quantifier": "^1.0.3",
+    "underscore": "^1.8.3"
+  }
+}
