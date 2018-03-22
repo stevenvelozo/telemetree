@@ -1,9 +1,10 @@
 /**
 * @license MIT
 * @author <steven@velozo.com>
+*
+* (Timers) and (?Histograms)
 */
 var libUnderscore = require('underscore');
-var libQuantifier = require('quantifier');
 
 class Telemetree
 {
@@ -13,27 +14,40 @@ class Telemetree
 
 		this.timers = {};
 
-		this.histograms = (
-		{
-			Seconds: libQuantifier.new(),
-			Minutes: libQuantifier.new(),
-			Hours: libQuantifier.new()
-		})
+		this.histograms = {};
 	}
 
 	// Create a timer that is not registered
-	createUnregisteredTimer(pName)
+	createUnregisteredTimer(pHash)
 	{
-
+		// Create a timer without a registration in the timers set
 	}
 
 	// Create a timer
-	createTimer(pName)
+	createTimer(pHash)
 	{
-
+		// Create a timer with a hash
 	}
 
-	// 
+	// Create a histogram
+	createHistogram(pHash)
+	{
+		// The histogram set also has a set of quantized buckets for events
+	}
+
+	// Add a count to a histogram
+	incrementHistogram(pHash, pAmount)
+	{
+		// Increment a histogram by an amount
+		let tmpAmount = (typeof(pAmount) === 'undefined') ? 1 : pAmount;
+
+		if (!this.histograms.hasOwnProperty(pHash))
+		{
+			this.createHistogram(pHash);
+		}
+
+		return this.histograms[pHash].increment(tmpAmount);
+	}
 }
 
 module.exports = Telemetree;

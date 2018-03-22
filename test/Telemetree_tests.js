@@ -5,7 +5,6 @@
 *
 * @author      Steven Velozo <steven@velozo.com>
 */
-
 var Chai = require("chai");
 var Expect = Chai.expect;
 var Assert = Chai.assert;
