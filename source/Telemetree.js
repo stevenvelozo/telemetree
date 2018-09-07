@@ -6,6 +6,7 @@
 */
 var libUnderscore = require('underscore');
 var libLuxon = require('luxon');
+var libQuantifier = require('quantifier');
 
 class Telemetree
 {

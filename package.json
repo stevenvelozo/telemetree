@@ -30,7 +30,6 @@
     "mocha": "5.0.4"
   },
   "dependencies": {
-    "luxon": "^1.0.0",
     "quantifier": "^1.0.3",
     "underscore": "^1.8.3"
   }
